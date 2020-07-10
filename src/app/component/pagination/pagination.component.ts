@@ -9,7 +9,12 @@ import { PaginationInstance } from 'ngx-pagination';
 export class PaginationComponent implements OnInit {
   @Input() paginationConfig: PaginationInstance;
 
-  constructor() {}
+  constructor() {
+    console.log('constructor');
+  }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    console.log('test');
+    console.log(this.paginationConfig);
+  }
 }

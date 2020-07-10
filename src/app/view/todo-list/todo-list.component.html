@@ -1,5 +1,10 @@
 <div class="row mt-5">
-  <div class="col-12 p-5">
-    <datatable></datatable>
+  <h2 class="bold text-primary">List Todos</h2>
+  <div class="col-12">
+    <datatable
+      [data]="data"
+      action="true"
+      [headerTable]="headerTable"
+    ></datatable>
   </div>
 </div>

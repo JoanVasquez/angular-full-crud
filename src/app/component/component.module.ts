@@ -8,6 +8,6 @@ import { DatatableComponent } from './datatable/datatable.component';
 @NgModule({
   declarations: [FormComponent, PaginationComponent, DatatableComponent],
   imports: [CommonModule, ReactiveFormsModule],
-  exports: [FormComponent, PaginationComponent],
+  exports: [FormComponent, DatatableComponent],
 })
 export class ComponentModule {}

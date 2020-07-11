@@ -9,7 +9,7 @@ import { Todo } from 'src/app/model/Todo';
   styleUrls: ['./todo-list.component.scss'],
 })
 export class TodoListComponent implements OnInit {
-  data: Observable<Todo[]>;
+  data: Todo[];
   headerTable: object;
 
   constructor(private todoService: TodoService) {}
@@ -25,6 +25,6 @@ export class TodoListComponent implements OnInit {
         delete: 'Delete',
       },
     };
-    this.data = this.todoService.getTodos();
+    this.todoService.getTodos().subscribe((res) => (this.data = res));
   }
 }

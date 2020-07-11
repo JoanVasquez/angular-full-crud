@@ -1,4 +1,4 @@
-<div class="table-responsive" *ngIf="(data | async)?.length > 0">
+<div class="table-responsive" *ngIf="data.length > 0">
   <table class="table table-sm table-striped text-center">
     <thead>
       <tr>
@@ -15,7 +15,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let dt of data | async | paginate: paginationConfig">
+      <tr *ngFor="let dt of data | paginate: paginationConfig">
         <td *ngFor="let ht of objectKeys(headerTable)">
           <div class="mt-2">
             {{ dt[ht] }}
@@ -43,6 +43,6 @@
   </table>
   <pagination
     [paginationConfig]="paginationConfig"
-    *ngIf="(data | async)?.length"
+    *ngIf="data.length"
   ></pagination>
 </div>

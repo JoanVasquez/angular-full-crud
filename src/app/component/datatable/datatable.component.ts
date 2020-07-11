@@ -12,7 +12,7 @@ import { paginationInstance } from './pagination.config';
 export class DatatableComponent implements OnInit {
   private objectKeys = Object.keys;
   private objectValues = Object.values;
-  @Input() data: Observable<Todo[]>;
+  @Input() data: Todo[] = [];
   @Input() action: boolean;
   @Input() headerTable: object;
 

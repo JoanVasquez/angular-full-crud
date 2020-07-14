@@ -13,8 +13,8 @@ export class ApiService {
     endPoint: string,
     headers: HttpHeaders,
     params?: HttpParams,
-    body?: string
-  ): any {
+    body?: any
+  ): Observable<any> {
     const url: string = `${this.api}/${endPoint}`;
     return this.http.request(method, url, {
       headers,

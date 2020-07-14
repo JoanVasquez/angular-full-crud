@@ -1,13 +1,17 @@
 //import { Validators } from '@angular/forms';
 
+import { Todo } from 'src/app/model/Todo';
+
 export const defaultValues = {
+  id: null,
   userId: null,
   title: '',
   completed: false,
 };
 
-export const setData = (data) => {
+export const setData = (data: Todo) => {
   return {
+    id: [data.id],
     userId: [data.userId],
     title: [data.title],
     completed: [data.completed],

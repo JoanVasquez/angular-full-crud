@@ -8,6 +8,7 @@ import { NgxPaginationModule } from 'ngx-pagination';
 import { NavbarComponent } from './navbar/navbar.component';
 import { ReversePipe } from '../shared/reverse.pipe';
 import { RouterModule } from '@angular/router';
+import { AppRoutingModule } from '../app-routing.module';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,12 @@ import { RouterModule } from '@angular/router';
     NavbarComponent,
     ReversePipe,
   ],
-  imports: [CommonModule, ReactiveFormsModule, NgxPaginationModule],
+  imports: [
+    AppRoutingModule,
+    CommonModule,
+    ReactiveFormsModule,
+    NgxPaginationModule,
+  ],
   exports: [FormComponent, DatatableComponent, NavbarComponent],
 })
 export class ComponentModule {}
